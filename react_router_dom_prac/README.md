@@ -1,1 +1,1 @@
-## 제가보기위한 react router dom Practice 입니다
+## react router dom을 편하게 사용하기 위한 Practice 입니다.
