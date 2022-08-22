@@ -2,29 +2,33 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-//import { detailId } from "../../redux/modules/todos";
+import { detailId } from "../../redux/modules/todos";
 
 const Detail=()=>{
     
     const Navigate = useNavigate();
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const todos = useSelector((state)=>state.todos.todo);
-    /* const {id} = useParams();
+    const {id} = useParams();
+    //1 useParams로 파라미터(id값을 불러온다)
 
-    //렌더링후에 가져오기 훅
+    //렌더링후에 가져오기 훅 useEffect
     useEffect(()=>{
         dispatch(detailId(id));
-    },[dispatch,id]) */
-
+    },[dispatch,id])
+    console.log(id)
+   //렌더링 될때마다(id값이) dispatch로 id값을 detailId로 보낸다.
+   //[dispatch,id] 는 dependency array라고 하는데 요녀석이 바뀌면 useEffect가 작동한다!
    
+
 
     return (
         <DetailLayout>
             <DetailContaine>
                 <div>
                     <DetailHeader>
-                        <div>ID : {todos.id}</div>
+                        <div>ID : {id}</div>
                         <DetailBackButton 
                         onClick={() => {
                             Navigate("/");

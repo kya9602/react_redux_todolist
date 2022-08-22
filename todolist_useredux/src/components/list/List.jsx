@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const List = () =>{
     const todos = useSelector((state)=>state.todos.todos);
-    console.log(todos)
+    //console.log(todos)
     const dispatch = useDispatch();
 
     const onClickTodoDoneBtn = (id) =>{
@@ -26,7 +26,7 @@ const List = () =>{
             return (
               <TodoContainer key={todo.id}>
                 
-                  <div>상세보기</div>   
+                <ViewLink to={`/${todo.id}`} key={todo.id}>상세보기</ViewLink> 
                 
 
                 <div>
@@ -65,7 +65,7 @@ const List = () =>{
             return (
               <TodoContainer key={todo.id}>    
                 
-                  <div>상세보기</div>   
+                  <ViewLink to={`/${todo.id}`} key={todo.id}>상세보기</ViewLink>
                          
                 <div>
                   <h2>{todo.title}</h2>
@@ -128,3 +128,7 @@ const TodoButton = styled.button`
   border-radius: 12px;
   cursor: pointer;
 `;
+
+const ViewLink = styled(Link)`
+
+`
