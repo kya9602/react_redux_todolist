@@ -19,7 +19,7 @@ const Form=()=>{
     const onSubmitHandler=(event)=>{
         event.preventDefault();
         if(todo.title===""||todo.body==="") return;
-        dispatch(addTodo({ ...todo ,id}));
+        dispatch(addTodo({ ...todo ,id }));
 
         setTodo({
             id: 0,
@@ -33,6 +33,8 @@ const Form=()=>{
         setTodo({ ...todo, [name]: value });
     };
 
+    //console.log(todo)
+    
     return(
         <From onSubmit={onSubmitHandler}>   
             <StInputGroup>        
