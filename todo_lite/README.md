@@ -35,7 +35,7 @@ export const addTodo =(payload)=>{
 };
 ```
 
--configStore사용
+- configStore사용
 config/configStore.js 참조
 
 - styled-components를 공부했어요.
