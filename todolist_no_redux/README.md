@@ -28,4 +28,4 @@ function Layout(props) {
 
 
 # map 함수와 filter 함수를 사용.
-
+List.jsx 참고
