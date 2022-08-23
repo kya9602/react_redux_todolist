@@ -33,6 +33,7 @@ export const addTodo =(payload)=>{
         payload:payload,
     };
 };
+
 ```
 
 - configStore사용
